@@ -11,8 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4baac405-19e9-461d-8460-91915ad8ea62" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/shevko/spring/configs/DispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/shevko/spring/configs/DispatcherServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/shevko/spring/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/shevko/spring/controllers/PeopleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/shevko/spring/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/shevko/spring/dao/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/shevko/spring/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/shevko/spring/models/Person.java" afterDir="false" />
     </list>
@@ -32,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="patch_delete" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
