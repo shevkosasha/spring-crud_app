@@ -10,22 +10,17 @@ public class Person {
   private int id;
 
   @NotEmpty(message = "name should not be empty")
-//  @Size(min = 2, max = 30, message = "name size should be between 2...30 characters")
+  @Size(min = 2, max = 30, message = "name size should be between 2...30 characters")
   private String name;
 
-//  @Min(value = 0, message = "age should be greater than 0")
+  @Min(value = 0, message = "age should be greater than 0")
   private int age;
 
   @Email(message = "email should be valid")
-//  @NotEmpty(message = "email should not be empty")
+  @NotEmpty(message = "email should not be empty")
   private String email;
 
   public Person() {}
-
-//  public Person(int id, String name) {
-//    this.id = id;
-//    this.name = name;
-//  }
 
   public Person(int id, String name, int age, String email) {
     this.id = id;
