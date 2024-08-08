@@ -2,8 +2,10 @@ package by.shevko.spring.controllers;
 
 import by.shevko.spring.dao.PersonDAO;
 import by.shevko.spring.models.Person;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -34,7 +36,7 @@ public class PeopleController {
   @GetMapping("/new")
   public String newPerson(@ModelAttribute("person") Person person) {
     //        model.addAttribute("person", new Person());
-    return "people/new_person";
+    return "people/new";
   }
 
   @GetMapping("/{id}/edit")
@@ -45,13 +47,28 @@ public class PeopleController {
   }
 
   @PostMapping()
-  public String create(@ModelAttribute("person") Person person) {
+  public String create(
+      @ModelAttribute("person") @Valid Person person, BindingResult bindingResult) {
+
+    if (bindingResult.hasErrors()) {
+      System.out.println("there are some errors:\n" + bindingResult.getAllErrors());
+      return "people/new";
+    }
+    System.out.println("everything is ok: " + person.toString());
     personDAO.save(person);
     return "redirect:/people";
   }
 
   @PatchMapping("/{id}")
-  public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id) {
+  public String update(
+      @ModelAttribute("person") @Valid Person person,
+      BindingResult bindingResult,
+      @PathVariable("id") int id) {
+
+    if (bindingResult.hasErrors()) {
+      return "people/edit";
+    }
+    
     personDAO.update(id, person);
     return "redirect:/people";
   }
